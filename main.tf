@@ -3,3 +3,10 @@ resource "azurerm_resource_group" "example" {
   location = "west us"
 
 }
+
+
+provider "azurerm" {
+  features {}
+  
+
+}
