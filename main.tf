@@ -1,12 +1,10 @@
-resource "azurerm_resource_group" "example" {
-  name     = "sridjha321656"
-  location = "west us"
 
-}
+module "Demo" {
 
+  source = "./Module"
 
-provider "azurerm" {
-  features {}
-  
+  count     = 2
+  base_name = "Loadbalancer123456${count.index}"
+
 
 }
